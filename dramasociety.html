@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Drama Society - Amrita Vishwa Vidyapeetham</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fdfdfd;
+    }
+
+    header {
+      position: relative;
+      height: 300px;
+      background-image: url('https://clubdeteatroulacit.wordpress.com/wp-content/uploads/2013/10/banner-drama-club.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+
+    .nav {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .nav a:hover {
+      color: #ffd6dd;
+    }
+
+    .banner-text {
+      position: absolute;
+      bottom: 20px;
+      left: 30px;
+    }
+
+    .banner-text h1 {
+      font-size: 40px;
+      margin: 0;
+      color: #fff;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 30px;
+    }
+
+    main h2 {
+      color: #a6203a;
+      margin-bottom: 15px;
+    }
+
+    main p {
+      line-height: 1.7;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .activities {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .activity {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    #teams .activity img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-top: 20px;
+    }
+
+    #activities .activity img,
+    #events .activity img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 0;
+      margin: 0;
+    }
+
+    .activity p {
+      padding: 10px 15px 20px;
+    }
+
+    .join-section {
+      background: #a6203a;
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+      margin-top: 60px;
+      border-radius: 10px;
+    }
+
+    .join-section h2 {
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    .join-section p {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    .join-section a.button-link {
+      display: inline-block;
+      padding: 12px 25px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background: white;
+      color: #a6203a;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .join-section a.button-link:hover {
+      background: #ffe6ea;
+    }
+
+    /* Upcoming Events Section */
+    .events-section {
+      background: linear-gradient(135deg, #fff5fa, #fceff5);
+      padding: 60px 30px;
+      text-align: center;
+      border-radius: 20px;
+      margin: 50px 30px;
+    }
+
+    .events-section h2 {
+      color: #a6203a;
+      margin-bottom: 40px;
+      font-size: 32px;
+    }
+
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .event-card.fancy {
+      display: flex;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+    }
+
+    .event-card.fancy:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    .event-date {
+      background-color: #a6203a;
+      color: white;
+      padding: 20px 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      width: 80px;
+    }
+
+    .event-date .day {
+      font-size: 30px;
+      line-height: 1;
+    }
+
+    .event-date .month {
+      font-size: 14px;
+      text-transform: uppercase;
+      margin-top: 5px;
+    }
+
+    .event-info {
+      padding: 20px;
+      text-align: left;
+      flex: 1;
+    }
+
+    .event-info h3 {
+      margin: 0 0 10px;
+      color: #a6203a;
+      font-size: 20px;
+    }
+
+    .event-info p {
+      margin: 0 0 15px;
+      color: #444;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #e91e63;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .badge.green {
+      background: #4caf50;
+    }
+
+    .badge.orange {
+      background: #ff9800;
+    }
+
+    @media (max-width: 600px) {
+      .banner-text h1 {
+        font-size: 28px;
+      }
+
+      .nav {
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      .nav a {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="Clubs.html">Home</a>
+    <a href="#about">About</a>
+    <a href="#teams">Teams</a>
+  </div>
+  <div class="banner-text">
+    <h1>Drama Society</h1>
+  </div>
+</header>
+
+<!-- Upcoming Events Section -->
+<section class="events-section">
+  <h2>Upcoming Events</h2>
+  <div class="events-grid">
+    <div class="event-card fancy">
+      <div class="event-date">
+        <span class="day">26</span>
+        <span class="month">JUNE</span>
+      </div>
+      <div class="event-info">
+        <h3>Annual Drama Night</h3>
+        <p>A full-length theatrical performance by the society's top talents showcasing classic and contemporary plays.</p>
+        <span class="badge">Main Event</span>
+      </div>
+    </div>
+
+    <div class="event-card fancy">
+      <div class="event-date">
+        <span class="day">12</span>
+        <span class="month">JULY</span>
+      </div>
+      <div class="event-info">
+        <h3>One-Act Play Contest</h3>
+        <p>Compete or cheer in this exciting short-play challenge with themes revealed on the spot.</p>
+        <span class="badge green">Competition</span>
+      </div>
+    </div>
+
+    <div class="event-card fancy">
+      <div class="event-date">
+        <span class="day">01</span>
+        <span class="month">JULY</span>
+      </div>
+      <div class="event-info">
+        <h3>Acting Masterclass</h3>
+        <p>Learn from professional theatre artists during our intensive summer workshop series.</p>
+        <span class="badge orange">Workshop</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main>
+  <section id="about">
+    <h2>About the Drama Society</h2>
+    <p>
+      The Drama Society at Amrita Vishwa Vidyapeetham is a thriving hub for students passionate about the performing arts. Our members dive deep into theatrical performance, from acting and directing to set design and production management. We aim to express compelling stories, entertain, and inspire audiences through powerful stagecraft.  
+    </p>
+    <p>
+      Whether it's a classical play, a modern satire, or original student scripts, we believe in bringing stories to life with emotion and purpose. Members gain confidence, creativity, teamwork skills, and unforgettable memories throughout their journey. The Drama Society is not just a club—it's a family united by the love for theater.
+    </p>
+  </section>
+
+  <section id="teams" style="margin-top: 50px;">
+    <h2>Our Teams</h2>
+    <p>
+      These are the enthusiastic members who make the Drama Society come alive — both on stage and behind the scenes!
+    </p>
+
+    <div class="activities">
+      <div class="activity">
+        <img src="https://media.licdn.com/dms/image/v2/D4D03AQEB0KzIMoqxYg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1726076068694?e=2147483647&v=beta&t=u0VD79D8uAMrXXeop9_6QJtXveKLt7o3uFLfgsb7ZD0" alt="Riya">
+        <p><strong>Riya</strong><br>President - Lead performer and play director.</p>
+      </div>
+      <div class="activity">
+        <img src="https://webfiles.amrita.edu/2024/10/ase-coimbatore-dept-mechanical-engineering-achievements-img1.jpg" alt="Arjun">
+        <p><strong>Arjun</strong><br>Vice President - Script writer and rehearsal coordinator.</p>
+      </div>
+      <div class="activity">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvCT_9VlQvaGjECSMxc6nSggDneQKq-dpKDaVRs56_XUfvURFGezPZH54iPjpkMfSKJr4&usqp=CAU" alt="Priya">
+        <p><strong>Priya</strong><br>Creative Head - Stage design and character coaching.</p>
+      </div>
+      <div class="activity">
+        <img src="https://media.licdn.com/dms/image/v2/D5603AQHCpbmw-8VCcA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1732449252135?e=2147483647&v=beta&t=fWSF_a2dF9r7-siRCXx9b7cg2JB5KFpAXzyIqcPELwU" alt="Rahul">
+        <p><strong>Rahul</strong><br>Events Coordinator - Manages shows, lights and props.</p>
+      </div>
+      <div class="activity">
+        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sneha">
+        <p><strong>Sneha</strong><br>Costume Designer - Designs and curates attire for characters.</p>
+      </div>
+      <div class="activity">
+        <img src="https://randomuser.me/api/portraits/men/52.jpg" alt="Dev">
+        <p><strong>Dev</strong><br>Technical Lead - Handles sound, lighting, and backstage setup.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="activities" style="margin-top: 50px;">
+    <h2>Our Activities</h2>
+    <div class="activities">
+      <div class="activity">
+        <img src="https://webfiles.amrita.edu/2021/12/vrqkC1BE-inter-campus-competition-theatre-2.jpeg" alt="Stage Play" />
+        <p>Stage productions with student-written and classic plays.</p>
+      </div>
+      <div class="activity">
+        <img src="https://webfiles.amrita.edu/2021/09/c6XOXOQK-dentistry-cultural2.jpg" alt="Drama Fest" />
+        <p>Inter-college drama fest showcasing theatrical talent and storytelling.</p>
+      </div>
+      <div class="activity">
+        <img src="https://webfiles.amrita.edu/2019/12/eEgXMeLu-5001.jpg" alt="Rehearsals" />
+        <p>Acting workshops and scene rehearsals for upcoming performances.</p>
+      </div>
+      <div class="activity">
+        <img src="https://webfiles.amrita.edu/2020/02/YVKicruZ-790-2021-08-06T193726.390.jpg" alt="Street Play" />
+        <p>Street plays on social issues performed in public spaces.</p>
+      </div>
+      <div class="activity">
+        <img src="https://webfiles.amrita.edu/2018/02/anokha20187.jpg" alt="Open Mic" />
+        <p>Open mic nights where members perform monologues and skits.</p>
+      </div>
+      <div class="activity">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7cAt8iYEG-nKS7eQUSWA9O0cDNqkVB_cKQvV_uBipXfzBqbuX_sSx0WZpQxumkmH7E2w&usqp=CAU" alt="Improvisation" />
+        <p>Improvisation sessions to enhance creativity and spontaneity.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="join-section" id="join">
+    <h2>Join as a Member</h2>
+    <p>Love to perform? Got a flair for drama? Join the Drama Society and shine on stage with us!</p>
+    <a href="membership.html" class="button-link">Join Now</a>
+  </section>
+</main>
+
+</body>
+</html>

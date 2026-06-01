@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Academic Life | Campus Compass</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f8f9fb;
+    color:#333;
+    line-height:1.7;
+}
+
+header{
+    background:#a6203a;
+    color:white;
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+}
+
+.logo img{
+    height:70px;
+    margin-right:15px;
+}
+
+.logo-text h1{
+    font-size:24px;
+}
+
+.logo-text p{
+    color:#ffe6ea;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+.hero{
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.35),
+        rgba(0,0,0,0.35)
+    ),
+    url("https://webfiles.amrita.edu/2024/12/amrita-school-of-business-amaravati-hosted-an-session-on-the-topic-of-business-analytics-what-why-and-how-gallery-image3.jpeg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    color:white;
+    text-align:center;
+    padding:100px 20px;
+    min-height:400px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero h1{
+font-size:3rem;
+margin-bottom:15px;
+text-shadow:2px 2px 8px rgba(0,0,0,0.4);
+}
+
+.hero p{
+max-width:850px;
+margin:auto;
+font-size:1.1rem;
+text-shadow:1px 1px 5px rgba(0,0,0,0.4);
+}
+.hero-badge{
+    display:inline-block;
+    background:rgba(255,255,255,0.2);
+    padding:10px 20px;
+    border-radius:30px;
+    margin-bottom:20px;
+    font-weight:600;
+    backdrop-filter:blur(5px);
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:40px auto;
+}
+
+.section{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    margin-bottom:30px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+
+.section h2{
+    color:#a6203a;
+    margin-bottom:15px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    margin-top:20px;
+}
+
+.card{
+    background:#fff3f5;
+    border-left:5px solid #a6203a;
+    padding:20px;
+    border-radius:10px;
+}
+
+.card h3{
+    color:#a6203a;
+    margin-bottom:10px;
+}
+
+.tip-box{
+    background:#fff8e6;
+    border-left:5px solid orange;
+    padding:15px;
+    margin-top:15px;
+    border-radius:8px;
+}
+
+.exam-table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+.exam-table th,
+.exam-table td{
+    border:1px solid #ddd;
+    padding:12px;
+    text-align:center;
+}
+
+.exam-table th{
+    background:#a6203a;
+    color:white;
+}
+
+footer{
+    background:#a6203a;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+@media(max-width:768px){
+    nav ul{
+        margin-top:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:2rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFkQkqMeKoGbEvigZjXpJVTOw0WJ9Mjm4CrQ&s" alt="Amrita Logo" />
+
+<div class="logo-text">
+<h1>Amrita Vishwa Vidyapeetham</h1>
+<p>Amaravati Campus</p>
+</div>
+</div>
+
+<nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="academicpage.html">Academics</a></li>
+      <li><a href="Clubs.html">Clubs</a></li>
+      <li><a href="campushostelpage.html">Hostel Life</a></li>
+      <li><a href="survival.html">Survival Kit</a></li>
+      <li><a href="tools.html">Resources</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+</header>
+
+<section class="hero">
+
+    <p class="hero-badge">
+        Academic Excellence • Learning • Innovation
+    </p>
+
+    <h1>Academic Life at Amrita Amaravati</h1>
+
+    <p>
+        Academics are at the heart of your Amrita journey.
+        From understanding the curriculum and attendance policies
+        to mastering CIA examinations, ESEs, laboratory work,
+        and effective study strategies, this guide will help you
+        build a strong academic foundation and confidently achieve
+        your goals throughout your college life.
+    </p>
+
+</section>
+<div class="container">
+
+<!-- Branches -->
+
+<section class="section">
+
+<h2>🎓 B.Tech Programs Offered</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Computer Science Engineering (CSE)</h3>
+<p>
+Focuses on programming, software development,
+data structures, algorithms, databases,
+AI, cloud computing and cybersecurity.
+</p>
+</div>
+
+<div class="card">
+<h3>Computer & Communication Engineering (CCE)</h3>
+<p>
+Combines Computer Science with Communication Systems.
+Students learn software development along with networking,
+communication technologies and system design.
+</p>
+</div>
+
+<div class="card">
+<h3>Artificial Intelligence Engineering (AIE)</h3>
+<p>
+Specialized branch focusing on AI, Machine Learning,
+Deep Learning, Data Science, Computer Vision,
+and intelligent systems.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- Classes -->
+
+<section class="section">
+
+<h2>🏫 How Classes, Labs & Practicals Work</h2>
+
+<ul>
+<li>Regular theory classes are conducted daily.</li>
+<li>Faculty use presentations, whiteboards and practical demonstrations.</li>
+<li>Laboratory sessions are conducted for programming and technical subjects.</li>
+<li>Assignments, quizzes and mini-projects are given throughout the semester.</li>
+<li>Practical learning becomes increasingly important from the second year onwards.</li>
+</ul>
+
+<div class="tip-box">
+💡 Tip: Never skip lab sessions. Labs often contribute to internal marks and help build practical skills.
+</div>
+
+</section>
+
+<!-- Attendance -->
+
+<section class="section">
+
+<h2>📌 Attendance Rules</h2>
+
+<p>
+Attendance is taken seriously at Amrita.
+Maintaining good attendance helps you understand concepts,
+avoid academic issues and stay eligible for examinations.
+</p>
+
+<ul>
+<li>Attend classes regularly from Day 1.</li>
+<li>Missing classes can affect both understanding and internal performance.</li>
+<li>Attendance shortages may require special approvals.</li>
+<li>Consistent attendance improves faculty interaction and learning.</li>
+</ul>
+
+<div class="tip-box">
+⚠️ Freshers often underestimate attendance. Don't make that mistake during your first semester.
+</div>
+
+</section>
+
+<!-- Exams -->
+
+<section class="section">
+
+<h2>📝 Exam Pattern (CIA + ESE)</h2>
+
+<p>
+Amrita follows a Continuous Evaluation system.
+Your final grade depends on performance throughout the semester.
+</p>
+
+<table class="exam-table">
+
+<tr>
+<th>Component</th>
+<th>Description</th>
+<th>Weightage</th>
+</tr>
+
+<tr>
+<td>CIA</td>
+<td>Assignments, Quizzes, Mid Exams, Labs</td>
+<td>50%</td>
+</tr>
+
+<tr>
+<td>ESE</td>
+<td>End Semester Examination</td>
+<td>50%</td>
+</tr>
+
+</table>
+
+<br>
+
+<p>
+Based on student experiences, internal assessments,
+mid-semester exams and lab performance contribute
+significantly to final grades.
+</p>
+
+</section>
+
+<!-- CGPA -->
+
+<section class="section">
+
+<h2>🏆 How to Maintain a Good CGPA From Day One</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>1️⃣ Attend Every Class</h3>
+<p>
+Understanding concepts in class reduces study pressure before exams.
+</p>
+</div>
+
+<div class="card">
+<h3>2️⃣ Focus on Internals</h3>
+<p>
+CIA marks are easier to score than trying to recover marks during ESE.
+</p>
+</div>
+
+<div class="card">
+<h3>3️⃣ Complete Assignments Early</h3>
+<p>
+Never wait until deadlines. Consistency beats last-minute preparation.
+</p>
+</div>
+
+<div class="card">
+<h3>4️⃣ Use Labs Seriously</h3>
+<p>
+Practical knowledge improves placement readiness and project skills.
+</p>
+</div>
+
+<div class="card">
+<h3>5️⃣ Form Study Groups</h3>
+<p>
+Learning with classmates helps during difficult subjects and exams.
+</p>
+</div>
+
+<div class="card">
+<h3>6️⃣ Revise Weekly</h3>
+<p>
+One hour of revision every week is more effective than all-night study sessions.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- Senior Insights -->
+
+<section class="section">
+
+<h2>🎤 What Seniors Say</h2>
+
+<ul>
+<li>Infrastructure and labs are steadily improving.</li>
+<li>Most students agree that self-learning is essential.</li>
+<li>Faculty members are supportive and approachable.</li>
+<li>Students who stay consistent with academics perform well.</li>
+<li>Practical skills and projects matter alongside classroom learning.</li>
+</ul>
+
+</section>
+
+</div>
+
+<footer>
+Campus Compass 2026 | Amrita Vishwa Vidyapeetham, Amaravati
+</footer>
+
+</body>
+</html>

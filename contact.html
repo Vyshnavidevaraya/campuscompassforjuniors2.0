@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Amrita Vishwa Vidyapeetham</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+
+    header {
+      background-color: #a6203a;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-container img {
+      height: 100px;
+      margin-right: 20px;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-text h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .logo-text h2 {
+      margin: 4px 0 0 0;
+      font-size: 18px;
+      font-weight: normal;
+      color: #ffe6ea;
+    }
+
+    nav {
+      background-color: #f2f2f2;
+      padding: 10px 30px;
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    nav a {
+      color: #a6203a;
+      text-decoration: none;
+      font-weight: bold;
+      margin-right: 20px;
+      font-size: 18px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-section {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 30px;
+    }
+
+    .contact-section h2 {
+      font-size: 32px;
+      color: #a6203a;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    .contact-card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 200px;
+    }
+
+    .contact-card h3 {
+      color: #a6203a;
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .contact-card a {
+      text-decoration: none;
+      font-size: 18px;
+      color: #555;
+      display: block;
+      margin-bottom: 10px;
+      transition: color 0.3s;
+    }
+
+    .contact-card a:hover {
+      color: #a6203a;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .social-icons a {
+      font-size: 24px;
+      color: #555;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #a6203a;
+    }
+
+    .social-icons img {
+      width: 40px;
+      height: 40px;
+      transition: transform 0.3s;
+    }
+
+    .social-icons img:hover {
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 600px) {
+      .contact-info {
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        flex-direction: column;
+        padding: 10px 15px;
+      }
+
+      nav a {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-container">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFkQkqMeKoGbEvigZjXpJVTOw0WJ9Mjm4CrQ&s" alt="Amrita Logo" />
+    <div class="logo-text">
+      <h1>Amrita Vishwa Vidyapeetham</h1>
+      <h2>Amaravati</h2>
+    </div>
+  </div>
+</header>
+
+<!-- Navigation -->
+<nav>
+  <a href="index.html">Home</a>
+</nav>
+
+<!-- Contact Section -->
+<section class="contact-section">
+  <h2>Contact Us</h2>
+
+  <div class="contact-info">
+    <!-- Email Contact -->
+    <div class="contact-card">
+      <h3>Email Us</h3>
+      <a href="mailto:info@amrita.edu">info@amrita.edu</a>
+    </div>
+
+    <!-- Phone Contact -->
+    <div class="contact-card">
+      <h3>Call Us</h3>
+      <a href="tel:+91234567890">+91 234 567 890</a>
+    </div>
+
+    <!-- Address Contact -->
+    <div class="contact-card">
+      <h3>Visit Us</h3>
+      <p>Amrita Vishwa Vidyapeetham</p>
+      <p>Amaravati Campus</p>
+      <p>India</p>
+    </div>
+  </div>
+
+  <!-- Social Media Icons -->
+  <div class="social-icons">
+    <!-- Instagram Icon -->
+    <a href="https://www.instagram.com/amritavishwavidyapeetham/" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
+    </a>
+
+    <!-- WhatsApp Icon -->
+    <a href="https://wa.me/91234567890" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+    </a>
+
+    <!-- Facebook Icon -->
+    <a href="https://www.facebook.com/amritavishwavidyapeetham" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" />
+    </a>
+  </div>
+</section>
+
+</body>
+</html>

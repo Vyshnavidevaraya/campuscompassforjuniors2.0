@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Amrita Vishwa Vidyapeetham</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+
+    nav ul {
+  	list-style: none;
+  	display: flex;
+  	gap: 25px;
+  	margin: 0;
+  	padding: 0;
+    }
+	
+    nav ul li a {
+  	color: white;
+  	text-decoration: none;
+  	font-weight: 600;
+  	transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+  	color: #ffe6ea;
+    }
+    header {
+      background-color: #a6203a;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-container img {
+      height: 80px;
+      margin-right: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .logo-container img:hover {
+      transform: scale(1.05);
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-text h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .logo-text h2 {
+      margin: 4px 0 0 0;
+      font-size: 18px;
+      font-weight: normal;
+      color: #ffe6ea;
+    }
+
+    .nav-links {
+      margin-left: auto;
+      display: flex;
+      gap: 20px;
+    }
+
+    .login-btn, .contact-btn {
+      background-color: white;
+      color: #a6203a;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .login-btn:hover, .contact-btn:hover {
+      background-color: #ffe6ea;
+      color: #a6203a;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .banner {
+      width: 100%;
+      height: 400px;
+      background-image: url('https://webfiles.amrita.edu/2022/03/nbElb5oz-amrita-amaravati-campus-banner-2022.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
+
+    .banner::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .banner-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 20px;
+    }
+.hero-badge{
+  display:inline-block;
+  background:rgba(255,255,255,0.15);
+  border:1px solid rgba(255,255,255,0.3);
+  backdrop-filter:blur(8px);
+  padding:10px 20px;
+  border-radius:30px;
+  margin-bottom:20px;
+  font-weight:600;
+}
+
+.hero-text{
+  font-size:1.15rem;
+  max-width:850px;
+  margin:auto;
+  margin-top:20px;
+  line-height:1.8;
+}
+
+.banner{
+  background:
+  linear-gradient(
+    rgba(0,0,0,0.45),
+    rgba(0,0,0,0.45)
+  ),
+  url("https://webfiles.amrita.edu/2022/03/nbElb5oz-amrita-amaravati-campus-banner-2022.jpg");
+
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+
+  min-height:450px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+    .banner h2 {
+      font-size: 42px;
+      font-weight: bold;
+      margin: 0;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .clubs {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .club-card{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
+transition:0.3s;
+border-top:4px solid #a6203a;
+text-align:left;
+}
+
+.club-card:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.club-card h3{
+color:#a6203a;
+margin-bottom:12px;
+font-size:1.4rem;
+}
+
+.club-card p{
+color:#555;
+line-height:1.7;
+}
+
+.featured-badge{
+display:inline-block;
+background:#a6203a;
+color:white;
+padding:5px 10px;
+border-radius:20px;
+font-size:12px;
+font-weight:600;
+margin-bottom:10px;
+}
+    a {
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .banner {
+        height: 300px;
+      }
+      
+      .banner h2 {
+        font-size: 32px;
+      }
+      
+      .logo-container img {
+        height: 60px;
+      }
+      
+      .logo-text h1 {
+        font-size: 22px;
+      }
+      
+      .logo-text h2 {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .clubs {
+        grid-template-columns: 1fr;
+        padding: 20px;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+  	flex-wrap: wrap;
+  	justify-content: center;
+  	margin-top: 15px;
+      }      
+      .banner h2 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-container">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFkQkqMeKoGbEvigZjXpJVTOw0WJ9Mjm4CrQ&s" alt="Amrita Logo" />
+    <div class="logo-text">
+      <h1>Amrita Vishwa Vidyapeetham</h1>
+      <h2>Amaravati</h2>
+    </div>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="academicpage.html">Academics</a></li>
+      <li><a href="Clubs.html">Clubs</a></li>
+      <li><a href="campushostelpage.html">Hostel Life</a></li>
+      <li><a href="survival.html">Survival Kit</a></li>
+      <li><a href="tools.html">Resources</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Banner -->
+<section class="banner">
+  <div class="banner-content">
+
+    <p class="hero-badge">
+      Leadership • Creativity • Innovation • Teamwork
+    </p>
+
+    <h2>Student Clubs & Activities</h2>
+
+    <p class="hero-text">
+      College life extends far beyond classrooms.
+      Student clubs provide opportunities to develop technical,
+      creative, leadership, and communication skills while building
+      lifelong friendships and unforgettable memories.
+    </p>
+
+  </div>
+</section>
+<section style="
+max-width:1100px;
+margin:50px auto;
+padding:0 30px;
+text-align:center;
+">
+
+<h2 style="
+color:#a6203a;
+font-size:2rem;
+margin-bottom:20px;
+">
+Why Join a Club?
+</h2>
+
+<p style="
+max-width:900px;
+margin:auto;
+font-size:1.1rem;
+line-height:1.8;
+">
+Joining clubs is one of the best ways to enhance your college experience.
+Whether you're interested in coding, music, sports, literature, arts,
+or public speaking, clubs help you discover your passions, develop
+valuable skills, and connect with like-minded students.
+</p>
+
+</section>
+<section class="clubs">
+
+<a href="artsclub.html">
+<div class="club-card">
+<h3>🎨 Avinya</h3>
+<p>
+A creative arts club that encourages painting,
+sketching, crafts, digital art, and artistic expression.
+</p>
+</div>
+</a>
+
+<a href="dramasociety.html">
+<div class="club-card">
+<h3>🎭 Drusya</h3>
+<p>
+The theatre and drama club where students develop
+acting, storytelling, stage presence, and public speaking skills.
+</p>
+</div>
+</a>
+
+<a href="music culb.html">
+<div class="club-card">
+<h3>🎵 Saptaswara</h3>
+<p>
+A vibrant music club for singers, instrumentalists,
+and music enthusiasts to perform and collaborate.
+</p>
+</div>
+</a>
+
+<a href="coding circle.html">
+<div class="club-card">
+
+<span class="featured-badge">Featured Technical Club</span>
+
+<h3>💻 Chakravyuha</h3>
+<p>
+Technical club focused on programming,
+competitive coding, hackathons, AI, and software development.
+</p>
+
+</div>
+</a>
+
+<a href="book warms club.html">
+<div class="club-card">
+<h3>📚 Bookworms</h3>
+<p>
+A community for readers and writers who enjoy
+literature, discussions, and creative expression.
+</p>
+</div>
+</a>
+
+
+</section>
+</body>
+</html>

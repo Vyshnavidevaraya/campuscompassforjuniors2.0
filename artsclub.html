@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Art Club - Amrita Vishwa Vidyapeetham</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fdfdfd;
+    }
+
+    header {
+      position: relative;
+      height: 300px;
+      background-image: url('https://www.shutterstock.com/image-vector/colorful-vector-illustration-graphic-design-260nw-1505952923.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+
+    .nav {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .nav a:hover {
+      color: #ffd6dd;
+    }
+
+    .banner-text {
+      position: absolute;
+      bottom: 20px;
+      left: 30px;
+    }
+
+    .banner-text h1 {
+      font-size: 40px;
+      margin: 0;
+      color: #fff;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 30px;
+    }
+
+    main h2 {
+      color: #a6203a;
+      margin-bottom: 15px;
+    }
+
+    main p {
+      line-height: 1.7;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .activities {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .activity {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    #teams .activity img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-top: 20px;
+    }
+
+    #activities .activity img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 0;
+      margin: 0;
+    }
+
+    .activity p {
+      padding: 10px 15px 20px;
+    }
+
+    .join-section {
+      background: #a6203a;
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+      margin-top: 60px;
+      border-radius: 10px;
+    }
+
+    .join-section h2 {
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    .join-section p {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    .join-button {
+      display: inline-block;
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 8px;
+      background: white;
+      color: #a6203a;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .join-button:hover {
+      background: #ffe6ea;
+    }
+
+    /* Upcoming Events Section */
+
+.events-section {
+  background: linear-gradient(135deg, #fff5fa, #fceff5);
+  padding: 60px 30px;
+  text-align: center;
+  border-radius: 20px;
+  margin: 50px 30px;
+}
+
+.events-section h2 {
+  color: #a6203a;
+  margin-bottom: 40px;
+  font-size: 32px;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.event-card.fancy {
+  display: flex;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.event-card.fancy:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+.event-date {
+  background-color: #a6203a;
+  color: white;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  width: 80px;
+}
+
+.event-date .day {
+  font-size: 30px;
+  line-height: 1;
+}
+
+.event-date .month {
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+.event-info {
+  padding: 20px;
+  text-align: left;
+  flex: 1;
+}
+
+.event-info h3 {
+  margin: 0 0 10px;
+  color: #a6203a;
+  font-size: 20px;
+}
+
+.event-info p {
+  margin: 0 0 15px;
+  color: #444;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.badge {
+  display: inline-block;
+  background: #e91e63;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.badge.green {
+  background: #4caf50;
+}
+
+.badge.orange {
+  background: #ff9800;
+}
+
+
+    @media (max-width: 600px) {
+      .banner-text h1 {
+        font-size: 28px;
+      }
+
+      .nav {
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      .nav a {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="Clubs.html">Home</a>
+    <a href="#about">About</a>
+    <a href="#teams">Teams</a>
+  </div>
+  <div class="banner-text">
+    <h1>Art Club</h1>
+  </div>
+</header>
+
+<!-- ✅ Upcoming Events Section -->
+
+<section class="events-section">
+  <h2>Upcoming Events</h2>
+  <div class="events-grid">
+    <div class="event-card fancy">
+      <div class="event-date">
+        <span class="day">25</span>
+        <span class="month">JUNE</span>
+      </div>
+      <div class="event-info">
+        <h3>Live Canvas Jam</h3>
+        <p>Join fellow artists for a fun, collaborative canvas painting event in the campus courtyard!</p>
+        <span class="badge">Open to All</span>
+      </div>
+    </div>
+
+    <div class="event-card fancy">
+      <div class="event-date">
+        <span class="day">05</span>
+        <span class="month">JULY</span>
+      </div>
+      <div class="event-info">
+        <h3>Poster Making for Eco Day</h3>
+        <p>Create thought-provoking posters to celebrate environmental awareness through art.</p>
+        <span class="badge green">Eco Theme</span>
+      </div>
+    </div>
+
+    <div class="event-card fancy">
+      <div class="event-date">
+        <span class="day">20</span>
+        <span class="month">JUNE</span>
+      </div>
+      <div class="event-info">
+        <h3>Mid-Sem Art Marathon</h3>
+        <p>A 24-hour nonstop art challenge with themes revealed hourly. Prizes for creativity!</p>
+        <span class="badge orange">Competition</span>
+      </div>
+    </div>
+  </div>
+</section>
+>
+
+<main>
+  <section id="about">
+    <h2>About the Art Club</h2>
+    <p>
+      The Art Club at Amrita Vishwa Vidyapeetham is a vibrant community of creative thinkers, passionate about visual storytelling, painting, sketching, and more.
+      Our mission is to inspire students to discover their inner artist and provide a platform for them to showcase their talents.
+      We host regular workshops, art exhibitions, mural projects, and even collaborate with other departments to bring art into every corner of campus.
+      Whether you're a beginner or a professional, the Art Club welcomes you with open arms and a splash of color!
+    </p>
+  </section>
+
+  <section id="teams" style="margin-top: 50px;">
+    <h2>Our Teams</h2>
+    <p>Meet the amazing artists who lead and contribute to our Art Club projects. Each one brings a unique style and passion to the team!</p>
+
+    <div class="activities">
+      <div class="activity">
+        <img src="https://media.licdn.com/dms/image/v2/D4D03AQEB0KzIMoqxYg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1726076068694?e=2147483647&v=beta&t=u0VD79D8uAMrXXeop9_6QJtXveKLt7o3uFLfgsb7ZD0" alt="Riya">
+        <p><strong>Riya</strong><br>President - Specializes in watercolor & mural art.</p>
+      </div>
+      <div class="activity">
+        <img src="https://webfiles.amrita.edu/2024/10/ase-coimbatore-dept-mechanical-engineering-achievements-img1.jpg" alt="Arjun">
+        <p><strong>Arjun</strong><br>Vice President - Digital illustrator and workshop organizer.</p>
+      </div>
+      <div class="activity">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvCT_9VlQvaGjECSMxc6nSggDneQKq-dpKDaVRs56_XUfvURFGezPZH54iPjpkMfSKJr4&usqp=CAU" alt="Priya">
+        <p><strong>Priya</strong><br>Creative Head - Sketch artist and wall mural expert.</p>
+      </div>
+      <div class="activity">
+        <img src="https://media.licdn.com/dms/image/v2/D5603AQHCpbmw-8VCcA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1732449252135?e=2147483647&v=beta&t=fWSF_a2dF9r7-siRCXx9b7cg2JB5KFpAXzyIqcPELwU" alt="Rahul">
+        <p><strong>Rahul</strong><br>Events Coordinator - Handles event planning and decor art.</p>
+      </div>
+      <div class="activity">
+        <img src="https://webfiles.amrita.edu/2019/06/tiYNQa7H-Inside-530x334-engg-1.jpg" alt="Neha">
+        <p><strong>Neha</strong><br>Publicity Head - Designs posters and handles social media outreach.</p>
+      </div>
+      <div class="activity">
+        <img src="https://webfiles.amrita.edu/2021/09/6O5VOgA6-jishnu-nair.jpg" alt="Varun">
+        <p><strong>Varun</strong><br>Logistics Lead - Manages resources and setup for events.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="activities" style="margin-top: 50px;">
+    <h2>Our Activities</h2>
+    <div class="activities">
+      <div class="activity">
+        <img src="https://webfiles.amrita.edu/2019/06/GG38Yyxr-chitrakalakari-news.jpg" alt="Workshop" />
+        <p>Sketching Workshop with live demos and interactive sessions.</p>
+      </div>
+      <div class="activity">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvvmHnMCLxGqxI_B0YEqgMieRBikx0jQWfmbmyt4-uJudvYeJ_ry8hwRDWaZ7ReYprhAI&usqp=CAU" alt="Art Exhibition" />
+        <p>Annual Art Exhibition featuring student artwork and installations.</p>
+      </div>
+      <div class="activity">
+        <img src="https://webfiles.amrita.edu/2023/09/Oz8Ibh2w-about-silpa-kalakshetram.jpg" alt="Wall Mural" />
+        <p>Collaborative wall mural painting for campus beautification.</p>
+      </div>
+      <div class="activity">
+        <img src="https://webfiles.amrita.edu/2021/07/WYwYnv6i-daylife-at-amritapuri-1.jpg" alt="Calligraphy" />
+        <p>Modern Calligraphy sessions for typography lovers and beginners.</p>
+      </div>
+      <div class="activity">
+        <img src="https://webfiles.amrita.edu/2021/12/LwYcohgf-varnam-club_1.jpeg" alt="Plein Air" />
+        <p>Plein Air sketch walks to capture real-time campus life on canvas.</p>
+      </div>
+      <div class="activity">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzMkwEs9Q2764K9NLLpgpda0vlHYkgj1cvZQ&s" alt="Team Art" />
+        <p>Team canvas challenges where multiple artists work on one painting.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="join-section" id="join">
+    <h2>Join as a Member</h2>
+    <p>Love art? Want to be part of a creative and fun community? Become a member today!</p>
+    <a href="membership.html" class="join-button">Join Now</a>
+  </section>
+</main>
+
+</body>
+</html>

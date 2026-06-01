@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Join Sports Crew - Membership Form</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fdfdfd;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #a6203a;
+      color: white;
+      padding: 20px 30px;
+      text-align: center;
+    }
+
+    main {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px 30px;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #a6203a;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, select {
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    button {
+      margin-top: 25px;
+      padding: 12px;
+      font-size: 16px;
+      background-color: #a6203a;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #8c1c32;
+    }
+
+    .back-link {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .back-link a {
+      color: #a6203a;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+
+    .error-message {
+      color: #d9534f;
+      font-size: 14px;
+      margin-top: 10px;
+      text-align: center;
+      display: none;
+    }
+
+    .success-message {
+      color: #5cb85c;
+      font-size: 14px;
+      margin-top: 10px;
+      text-align: center;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Membership Form</h1>
+</header>
+
+<main>
+  <h2>Join the Sports Crew</h2>
+  <form id="membershipForm">
+    <div id="errorMessage" class="error-message"></div>
+    <div id="successMessage" class="success-message"></div>
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="studentId">Student ID</label>
+    <input type="text" id="studentId" name="studentId" required>
+
+    <label for="club">Choose Club</label>
+    <select id="club" name="club" required>
+      <option value="sports-crew">Sports Crew</option>
+      <option value="coding-circle">Coding Circle</option>
+      <option value="bookwarm-club">Bookwarm Club</option>
+      <option value="art-club">Art Club</option>
+      <option value="drama-society">Drama Society Club</option>
+      <option value="music-club">Music Club</option>
+    </select>
+
+    <button type="submit">Submit Membership</button>
+  </form>
+
+  <div class="back-link">
+    <p><a href="#" id="backLink">← Back to Clubs</a></p>
+  </div>
+</main>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const membershipForm = document.getElementById('membershipForm');
+    const errorMessage = document.getElementById('errorMessage');
+    const successMessage = document.getElementById('successMessage');
+    const backLink = document.getElementById('backLink');
+
+    // Validate email format
+    function isValidEmail(email) {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(String(email).toLowerCase());
+    }
+
+    // Handle form submission
+    membershipForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const studentId = document.getElementById('studentId').value.trim();
+      const club = document.getElementById('club').value;
+
+      // Reset messages
+      errorMessage.style.display = 'none';
+      successMessage.style.display = 'none';
+
+      // Validate inputs
+      if (!name || !email || !studentId || !club) {
+        errorMessage.textContent = 'All fields are required.';
+        errorMessage.style.display = 'block';
+        return;
+      }
+
+      if (!isValidEmail(email)) {
+        errorMessage.textContent = 'Please enter a valid email address.';
+        errorMessage.style.display = 'block';
+        return;
+      }
+
+      // Simulate successful submission
+      console.log('Form submitted:', { name, email, studentId, club });
+      successMessage.textContent = 'Membership submitted successfully! Redirecting...';
+      successMessage.style.display = 'block';
+
+      // Simulate API call delay and redirect
+      setTimeout(() => {
+        console.log('Redirecting to Clubs.html');
+        window.location.href = 'Clubs.html'; // Relative path
+      }, 2000);
+    });
+
+    // Handle back link click
+    backLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      console.log('Navigating back to Clubs.html');
+      window.location.href = 'Clubs.html'; // Relative path
+    });
+  });
+</script>
+</body>
+</html>

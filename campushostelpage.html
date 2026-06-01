@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Campus & Hostel Life | Campus Compass</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f8f9fb;
+    color:#333;
+    line-height:1.7;
+}
+.card{
+    background:#fff3f5;
+    border-left:5px solid #a6203a;
+    padding:20px;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+header{
+    background:#a6203a;
+    color:white;
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+}
+
+.logo img{
+    height:70px;
+    margin-right:15px;
+}
+
+.logo-text h1{
+    font-size:24px;
+}
+
+.logo-text p{
+    color:#ffe6ea;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+.section h2{
+    color:#a6203a;
+    margin-bottom:15px;
+    border-left:5px solid #a6203a;
+    padding-left:12px;
+}
+.hero{
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.35),
+        rgba(0,0,0,0.35)
+    ),
+    url("https://images.shiksha.com/mediadata/images/1759907782phpyBvKS5.png");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    color:white;
+    text-align:center;
+
+    min-height:420px;
+    padding:100px 20px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero h1{
+    font-size:3rem;
+    margin-bottom:20px;
+    text-shadow:2px 2px 8px rgba(0,0,0,0.5);
+}
+
+.hero p{
+    max-width:850px;
+    margin:auto;
+    font-size:1.15rem;
+    line-height:1.8;
+    text-shadow:1px 1px 5px rgba(0,0,0,0.5);
+}
+
+.hero-badge{
+    display:inline-block;
+    background:rgba(255,255,255,0.15);
+    border:1px solid rgba(255,255,255,0.3);
+    backdrop-filter:blur(8px);
+    padding:10px 20px;
+    border-radius:30px;
+    margin-bottom:20px;
+    font-weight:600;
+}
+.hero h1{
+    font-size:2.8rem;
+    margin-bottom:15px;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:40px auto;
+}
+
+.section{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    margin-bottom:25px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+
+.section h2{
+    color:#a6203a;
+    margin-bottom:15px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    margin-top:20px;
+}
+
+.card{
+    background:#fff3f5;
+    border-left:5px solid #a6203a;
+    padding:20px;
+    border-radius:10px;
+}
+
+.card h3{
+    color:#a6203a;
+    margin-bottom:10px;
+}
+
+.tip{
+    background:#fff8e6;
+    border-left:5px solid orange;
+    padding:15px;
+    margin-top:15px;
+    border-radius:8px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+table th{
+    background:#a6203a;
+    color:white;
+}
+
+table th,
+table td{
+    border:1px solid #ddd;
+    padding:12px;
+    text-align:center;
+}
+
+footer{
+    background:#a6203a;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2rem;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+margin-top:15px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFkQkqMeKoGbEvigZjXpJVTOw0WJ9Mjm4CrQ&s" alt="Amrita Logo" />
+
+<div class="logo-text">
+<h1>Amrita Vishwa Vidyapeetham</h1>
+<p>Amaravati Campus</p>
+</div>
+</div>
+
+<nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="academicpage.html">Academics</a></li>
+      <li><a href="Clubs.html">Clubs</a></li>
+      <li><a href="campushostelpage.html">Hostel Life</a></li>
+      <li><a href="survival.html">Survival Kit</a></li>
+      <li><a href="tools.html">Resources</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+</header>
+
+<section class="hero">
+
+<p class="hero-badge">
+Hostel Life • Campus Living • Student Community
+</p>
+
+<h1>Campus & Hostel Life</h1>
+
+<p>
+Your hostel will be much more than just a place to stay.
+It will become your second home where friendships are built,
+memories are created, and personal growth begins.
+
+Explore everything from daily routines and hostel facilities
+to dining, transportation, campus resources, and student life
+at Amrita Amaravati.
+</p>
+
+</section>
+<div class="container">
+
+<!-- Daily Routine -->
+
+<section class="section">
+
+<h2>📅 A Typical Day at Amrita</h2>
+
+<table>
+
+<tr>
+<th>Time</th>
+<th>Activity</th>
+</tr>
+
+<tr>
+<td>7:00 AM</td>
+<td>Wake Up & Get Ready</td>
+</tr>
+
+<tr>
+<td>7:30 AM - 8:30 AM</td>
+<td>Breakfast</td>
+</tr>
+
+<tr>
+<td>9:00 AM - 1:00 PM</td>
+<td>Classes / Labs</td>
+</tr>
+
+<tr>
+<td>1:00 PM - 2:00 PM</td>
+<td>Lunch Break</td>
+</tr>
+
+<tr>
+<td>2:00 PM - 5:00 PM</td>
+<td>Classes / Practical Sessions</td>
+</tr>
+
+<tr>
+<td>5:00 PM - 7:00 PM</td>
+<td>Sports / Clubs / Free Time</td>
+</tr>
+
+<tr>
+<td>7:00 PM - 8:30 PM</td>
+<td>Dinner</td>
+</tr>
+
+<tr>
+<td>8:30 PM onwards</td>
+<td>Assignments, Study Time & Relaxation</td>
+</tr>
+
+</table>
+
+</section>
+
+<!-- Hostel -->
+
+<section class="section">
+
+<h2>🏢 Hostel Facilities</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🚶 Compact Campus</h3>
+<p>
+The campus is compact and walkable. Most places can be reached
+within 5 minutes, so bicycles are generally not required.
+</p>
+</div>
+
+<div class="card">
+<h3>📶 Wi-Fi</h3>
+<p>
+Hostels and academic blocks are covered with campus Wi-Fi for
+academic purposes.
+</p>
+</div>
+
+<div class="card">
+<h3>🛏️ Comfortable Rooms</h3>
+<p>
+Hostel rooms provide a peaceful environment suitable for
+studying and academic activities.
+</p>
+</div>
+
+<div class="card">
+<h3>📚 Study Friendly</h3>
+<p>
+The hostel atmosphere is generally calm and academically
+focused, making it easier to concentrate on studies.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- Food -->
+
+<section class="section">
+
+<h2>🍽️ Food & Mess Information</h2>
+
+<p>
+The hostel mess primarily serves vegetarian food.
+</p>
+
+<table>
+
+<tr>
+<th>Meal</th>
+<th>Approximate Timing</th>
+</tr>
+
+<tr>
+<td>Breakfast</td>
+<td>7:30 AM - 8:30 AM</td>
+</tr>
+
+<tr>
+<td>Lunch</td>
+<td>1:00 PM - 2:00 PM</td>
+</tr>
+
+<tr>
+<td>Dinner</td>
+<td>7:00 PM - 8:30 PM</td>
+</tr>
+
+</table>
+
+<div class="tip">
+🥗 Non-vegetarian food is not allowed inside hostel messes or academic blocks. Students who wish to have non-vegetarian food can purchase it from the campus canteen whenever available.
+</div>
+
+</section>
+
+<!-- Transport -->
+
+<section class="section">
+
+<h2>🚌 Transport Facilities</h2>
+
+<p>
+Most students stay in hostels, so the number of day scholars is relatively small.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>🚍 Vijayawada Buses</h3>
+<p>
+3 dedicated college buses operate between Vijayawada and the campus.
+</p>
+</div>
+
+<div class="card">
+<h3>🚍 Guntur Buses</h3>
+<p>
+3 dedicated college buses operate between Guntur and the campus.
+</p>
+</div>
+
+<div class="card">
+<h3>🏫 Easy Campus Access</h3>
+<p>
+Transportation is well organized for day scholars travelling from nearby cities.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- Important Places -->
+
+<section class="section">
+
+<h2>📍 Important Places to Know</h2>
+
+<ul>
+<li>Academic Blocks</li>
+<li>Library</li>
+<li>Hostels</li>
+<li>Mess Hall</li>
+<li>Canteen</li>
+<li>Sports Grounds</li>
+<li>Basketball Court</li>
+<li>Volleyball Court</li>
+<li>Administration Office</li>
+<li>Medical Support Facilities</li>
+</ul>
+
+</section>
+
+<!-- First Week -->
+
+<section class="section">
+
+<h2>🌟 Tips to Settle In During Your First Week</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Make Friends Early</h3>
+<p>
+Talk to classmates and hostel mates during orientation.
+</p>
+</div>
+
+<div class="card">
+<h3>Explore the Campus</h3>
+<p>
+Spend time locating important places like classrooms, library and mess.
+</p>
+</div>
+
+<div class="card">
+<h3>Attend Every Class</h3>
+<p>
+The first few weeks help you understand faculty expectations.
+</p>
+</div>
+
+<div class="card">
+<h3>Join Clubs</h3>
+<p>
+Participate in technical and cultural clubs to build skills and friendships.
+</p>
+</div>
+
+<div class="card">
+<h3>Maintain a Routine</h3>
+<p>
+Balancing academics, activities and rest will make college life easier.
+</p>
+</div>
+
+<div class="card">
+<h3>Ask Seniors</h3>
+<p>
+Seniors can help with academics, clubs and campus-related doubts.
+</p>
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+<footer>
+Campus Compass 2026 | Amrita Vishwa Vidyapeetham, Amaravati
+</footer>
+
+</body>
+</html>

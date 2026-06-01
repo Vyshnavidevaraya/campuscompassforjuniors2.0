@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Campus Compass | Amrita Vishwa Vidyapeetham Amaravati</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
+body{background:#f7f7f7;color:#333;line-height:1.6}
+header{background:#a6203a;color:#fff;padding:15px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;position:sticky;top:0}
+.logo{display:flex;align-items:center}
+.logo img{height:70px;margin-right:15px}
+nav ul{display:flex;gap:18px;list-style:none}
+nav a{color:#fff;text-decoration:none;font-weight:600}
+.mantra{
+    background:#FFFFFF;
+    text-align:center;
+    padding:25px;
+}
+
+.mantra h2{
+    color:#a6203a;   /* Same as navbar background */
+    font-size:2rem;
+    margin-bottom:10px;
+    font-weight:700;
+}
+
+.mantra p{
+    color:#a6203a;   /* Transliteration color */
+    font-size:1.1rem;
+}
+
+.mantra span{
+    color:#555;
+    font-style:italic;
+}
+.hero{
+height:85vh;
+background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS18AvDhMhYNKXHCSk_zktgAnZNbqxqO33m4g&s) center/cover;
+display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;
+}
+.glass{
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(10px);
+padding:40px;border-radius:20px;max-width:850px
+}
+.hero h1{font-size:4rem}
+.btn{display:inline-block;margin-top:20px;background:#fff;color:#a6203a;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:bold}
+section{padding:70px 10%}
+h2{color:#a6203a;margin-bottom:20px;text-align:center}
+.stats,.cards,.testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:#fff;padding:25px;border-radius:14px;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+footer{background:#a6203a;color:#fff;text-align:center;padding:35px}
+@media(max-width:768px){.hero h1{font-size:2.3rem}nav ul{flex-wrap:wrap}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFkQkqMeKoGbEvigZjXpJVTOw0WJ9Mjm4CrQ&s">
+<div>
+<h2 style="color:white;margin:0;text-align:left">Amrita Vishwa Vidyapeetham</h2>
+<p>Campus Compass • Amaravati</p>
+</div>
+</div>
+<nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="academicpage.html">Academics</a></li>
+      <li><a href="Clubs.html">Clubs</a></li>
+      <li><a href="campushostelpage.html">Hostel Life</a></li>
+      <li><a href="survival.html">Survival Kit</a></li>
+      <li><a href="tools.html">Resources</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+</header>
+
+<section class="mantra">
+
+    <h2>ॐ लोकाः समस्ताः सुखिनो भवन्तु</h2>
+
+    <p>Om Lokāḥ Samastāḥ Sukhino Bhavantu</p>
+
+    <span>
+        May all beings everywhere be happy and free.
+    </span>
+
+</section>
+
+<section class="hero">
+<div class="glass">
+<h1>Welcome Freshers 2026</h1>
+<p>Your complete guide to academics, clubs, hostel life, campus culture, resources and opportunities at Amrita Vishwa Vidyapeetham, Amaravati.</p>
+<a class="btn" href="#explore">Start Exploring</a>
+</div>
+</section>
+
+<section>
+<h2>Why Campus Compass?</h2>
+<p style="text-align:center;max-width:900px;margin:auto">Designed by seniors for freshers, Campus Compass answers every question you may have before your first day on campus and helps you confidently begin your Amrita journey.</p>
+</section>
+
+<section>
+<h2>At a Glance</h2>
+<div class="stats">
+<div class="card"><h3>📚 Academics</h3><p>CIA, ESE, attendance and study guidance.</p></div>
+<div class="card"><h3>🚀 Clubs</h3><p>Technical, cultural and sports communities.</p></div>
+<div class="card"><h3>🏠 Hostel Life</h3><p>Facilities, routines and campus living.</p></div>
+<div class="card"><h3>💡 Senior Advice</h3><p>Practical tips for first-year success.</p></div>
+</div>
+</section>
+
+<section id="explore">
+<h2>Explore Campus Compass</h2>
+<div class="cards">
+<div class="card"><h3>Academic Life</h3></div>
+<div class="card"><h3>Clubs & Activities</h3></div>
+<div class="card"><h3>Hostel Life</h3></div>
+<div class="card"><h3>Survival Kit</h3></div>
+<div class="card"><h3>Resources</h3></div>
+</div>
+</section>
+
+<section>
+<h2>Message From Seniors ❤️</h2>
+<div class="card">
+<p>Welcome to the Amrita family. We built this guide so you can start your journey with confidence, discover opportunities early, and make the most of every moment on campus.</p>
+</div>
+</section>
+
+<footer>
+<h3>Campus Compass 2026</h3>
+<p>Amrita Vishwa Vidyapeetham, Amaravati</p>
+<p>ॐ लोकाः समस्ताः सुखिनो भवन्तु</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sports Crew - Amrita Vishwa Vidyapeetham</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fdfdfd;
+    }
+
+    header {
+      position: relative;
+      height: 300px;
+      background-image: url('https://png.pngtree.com/background/20250108/original/pngtree-basketball-on-black-background-with-abstract-lights-picture-image_15524757.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+
+    .nav {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .nav a:hover {
+      color: #ffd6dd;
+    }
+
+    .banner-text {
+      position: absolute;
+      bottom: 20px;
+      left: 30px;
+    }
+
+    .banner-text h1 {
+      font-size: 40px;
+      margin: 0;
+      color: #fff;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 30px;
+    }
+
+    main h2 {
+      color: #a6203a;
+      margin-bottom: 15px;
+    }
+
+    main p {
+      line-height: 1.7;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .activities {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .activity {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    #teams .activity img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-top: 20px;
+    }
+
+    #activities .activity img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 0;
+      margin: 0;
+    }
+
+    .activity p {
+      padding: 10px 15px 20px;
+    }
+
+    .join-section {
+      background: #a6203a;
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+      margin-top: 60px;
+      border-radius: 10px;
+    }
+
+    .join-section h2 {
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    .join-section p {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    .join-button {
+      display: inline-block;
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 8px;
+      background: white;
+      color: #a6203a;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .join-button:hover {
+      background: #ffe6ea;
+    }
+
+    /* Upcoming Events Section */
+    .events-section {
+      background: linear-gradient(135deg, #fff5fa, #fceff5);
+      padding: 60px 30px;
+      text-align: center;
+      border-radius: 20px;
+      margin: 50px 30px;
+    }
+
+    .events-section h2 {
+      color: #a6203a;
+      margin-bottom: 40px;
+      font-size: 32px;
+    }
+
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .event-card.fancy {
+      display: flex;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+    }
+
+    .event-card.fancy:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    .event-date {
+      background-color: #a6203a;
+      color: white;
+      padding: 20px 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      width: 80px;
+    }
+
+    .event-date .day {
+      font-size: 30px;
+      line-height: 1;
+    }
+
+    .event-date .month {
+      font-size: 14px;
+      text-transform: uppercase;
+      margin-top: 5px;
+    }
+
+    .event-info {
+      padding: 20px;
+      text-align: left;
+      flex: 1;
+    }
+
+    .event-info h3 {
+      margin: 0 0 10px;
+      color: #a6203a;
+      font-size: 20px;
+    }
+
+    .event-info p {
+      margin: 0 0 15px;
+      color: #444;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #e91e63;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .badge.green {
+      background: #4caf50;
+    }
+
+    .badge.orange {
+      background: #ff9800;
+    }
+
+    @media (max-width: 600px) {
+      .banner-text h1 {
+        font-size: 28px;
+      }
+
+      .nav {
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      .nav a {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="C:\Users\vyshn\OneDrive\Desktop\html-js-css\Clubs.html">Home</a>
+    <a href="#about">About</a>
+    <a href="#teams">Teams</a>
+  </div>
+  <div class="banner-text">
+    <h1>Sports Crew</h1>
+  </div>
+</header>
+
+<!-- Upcoming Events Section -->
+<section class="events-section">
+  <h2>Upcoming Events</h2>
+  <div class="events-grid">
+    <div class="event-card fancy">
+      <div class="event-date">
+        <span class="day">15</span>
+        <span class="month">JUNE</span>
+      </div>
+      <div class="event-info">
+        <h3>Annual Sports Day</h3>
+        <p>Join us for our biggest event of the year with competitions in all major sports!</p>
+        <span class="badge green">Competition</span>
+      </div>
+    </div>
+
+    <div class="event-card fancy">
+      <div class="event-date">
+        <span class="day">22</span>
+        <span class="month">JULY</span>
+      </div>
+      <div class="event-info">
+        <h3>Fitness Bootcamp</h3>
+        <p>Week-long intensive training with professional coaches and nutrition guidance.</p>
+        <span class="badge">Open to All</span>
+      </div>
+    </div>
+
+    <div class="event-card fancy">
+      <div class="event-date">
+        <span class="day">05</span>
+        <span class="month">JUN</span>
+      </div>
+      <div class="event-info">
+        <h3>Inter-College Cricket</h3>
+        <p>Represent our university in the regional inter-college cricket tournament.</p>
+        <span class="badge orange">Selection Trials</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main>
+  <section id="about">
+    <h2>About the Sports Crew</h2>
+    <p>
+      The Sports Crew at Amrita Vishwa Vidyapeetham brings together passionate athletes and sports enthusiasts. 
+      Our team organizes regular fitness sessions, inter-college sports events, and various workshops that promote 
+      teamwork and physical well-being. We cater to all skill levels and provide opportunities for both competitive 
+      and recreational athletes to thrive in their favorite sports.
+    </p>
+  </section>
+
+  <section id="teams" style="margin-top: 50px;">
+    <h2>Our Team</h2>
+    <p>
+      Meet the incredible team behind the Sports Crew, working tirelessly to keep the campus active and engaged in sports.
+    </p>
+
+    <div class="activities">
+      <div class="activity">
+        <img src="https://media.licdn.com/dms/image/v2/D4D03AQEB0KzIMoqxYg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1726076068694?e=2147483647&v=beta&t=u0VD79D8uAMrXXeop9_6QJtXveKLt7o3uFLfgsb7ZD0" alt="Ava">
+        <p><strong>Ava</strong><br>President - Leads all sports events and fitness sessions.</p>
+      </div>
+      <div class="activity">
+        <img src="https://webfiles.amrita.edu/2024/10/ase-coimbatore-dept-mechanical-engineering-achievements-img1.jpg" alt="Max">
+        <p><strong>Max</strong><br>Vice President - Sports organizer and event planner.</p>
+      </div>
+      <div class="activity">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvCT_9VlQvaGjECSMxc6nSggDneQKq-dpKDaVRs56_XUfvURFGezPZH54iPjpkMfSKJr4&usqp=CAU" alt="Sophia">
+        <p><strong>Sophia</strong><br>Sports Coordinator - Manages sports activities and training.</p>
+      </div>
+      <div class="activity">
+        <img src="https://media.licdn.com/dms/image/v2/D5603AQHCpbmw-8VCcA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1732449252135?e=2147483647&v=beta&t=fWSF_a2dF9r7-siRCXx9b7cg2JB5KFpAXzyIqcPELwU" alt="Rahul">
+        <p><strong>Rahul</strong><br>Fitness Trainer - Certified trainer for gym and outdoor workouts.</p>
+      </div>
+      <div class="activity">
+        <img src="https://webfiles.amrita.edu/2019/06/tiYNQa7H-Inside-530x334-engg-1.jpg" alt="Neha">
+        <p><strong>Neha</strong><br>Publicity Head - Designs posters and handles social media outreach.</p>
+      </div>
+      <div class="activity">
+        <img src="https://webfiles.amrita.edu/2021/09/6O5VOgA6-jishnu-nair.jpg" alt="Varun">
+        <p><strong>Varun</strong><br>Logistics Lead - Manages resources and setup for events.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="activities" style="margin-top: 50px;">
+    <h2>Our Activities</h2>
+    <div class="activities">
+      <div class="activity">
+        <img src="https://intranet.av.amrita.edu/sites/default/files/inline-images/WhatsApp%20Image%202023-06-22%20at%204.24.21%20PM.jpeg" alt="Sports Events">
+        <p>Inter-college sports competitions, tournaments, and team-building activities.</p>
+      </div>
+      <div class="activity">
+        <img src="https://webfiles.amrita.edu/2021/09/Zc7QYOAv-Sports-1-1384.jpg" alt="Workshops">
+        <p>Fitness and nutrition workshops to promote healthy living.</p>
+      </div>
+      <div class="activity">
+        <img src="https://webfiles.amrita.edu/2009/03/vAinvW6q-football.jpg" alt="Training Sessions">
+        <p>Regular fitness training and practice sessions for all sports.</p>
+      </div>
+      <div class="activity">
+        <img src="https://webfiles.amrita.edu/2019/04/bxHX0lnr-sports-9.jpg" alt="Adventure Sports">
+        <p>Adventure sports trips including trekking, rock climbing and more.</p>
+      </div>
+      <div class="activity">
+        <img src="https://webfiles.amrita.edu/2019/04/bBxfDZv1-sports-7.jpg" alt="Intramural">
+        <p>Intramural sports leagues for friendly competition between departments.</p>
+      </div>
+      <div class="activity">
+        <img src="https://webfiles.amrita.edu/2021/09/S0qJLUOL-dentistry-cultural29.jpg" alt="Sports Clinics">
+        <p>Specialized sports clinics with professional coaches and athletes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="join-section" id="join">
+    <h2>Join the Sports Crew!</h2>
+    <p>Love sports? Get in the game with the Sports Crew. Join us today!</p>
+    <a href="C:\Users\vyshn\OneDrive\Desktop\html-js-css\membership.html" class="join-button">Join Now</a>
+  </section>
+</main>
+
+</body>
+</html>

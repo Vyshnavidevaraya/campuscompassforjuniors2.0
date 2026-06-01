@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Survival Kit | Campus Compass</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:#f8f9fb;
+color:#333;
+line-height:1.7;
+}
+
+header{
+background:#a6203a;
+color:white;
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.logo{
+display:flex;
+align-items:center;
+}
+
+.logo img{
+height:70px;
+margin-right:15px;
+}
+
+.logo-text p{
+color:#ffe6ea;
+}
+
+nav ul{
+display:flex;
+gap:20px;
+list-style:none;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+}
+
+.hero{
+background:
+linear-gradient(
+rgba(0,0,0,0.35),
+rgba(0,0,0,0.35)
+),
+url("https://media.licdn.com/dms/image/v2/D5622AQFDILx05ovcrA/feedshare-shrink_800/feedshare-shrink_800/0/1692629829123?e=2147483647&v=beta&t=7CMn6lM8MmK6_CRE-DHJcynIXsgE_bfQM7kmeNmFi_o");
+
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+
+color:white;
+text-align:center;
+
+min-height:420px;
+padding:100px 20px;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+
+.hero h1{
+font-size:3rem;
+margin-bottom:20px;
+text-shadow:2px 2px 8px rgba(0,0,0,0.5);
+}
+
+.hero p{
+max-width:850px;
+margin:auto;
+font-size:1.15rem;
+line-height:1.8;
+text-shadow:1px 1px 5px rgba(0,0,0,0.5);
+}
+
+.hero-badge{
+display:inline-block;
+background:rgba(255,255,255,0.15);
+border:1px solid rgba(255,255,255,0.3);
+backdrop-filter:blur(8px);
+padding:10px 20px;
+border-radius:30px;
+margin-bottom:20px;
+font-weight:600;
+}
+.hero h1{
+font-size:2.8rem;
+margin-bottom:15px;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:40px auto;
+}
+
+.section{
+background:white;
+padding:30px;
+border-radius:12px;
+margin-bottom:25px;
+box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+
+.section h2{
+color:#a6203a;
+margin-bottom:15px;
+border-left:5px solid #a6203a;
+padding-left:12px;
+}
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+margin-top:20px;
+}
+
+.card{
+padding:20px;
+border-radius:10px;
+}
+
+.do{
+background:#eafaf1;
+border-left:5px solid green;
+}
+
+.dont{
+background:#fff0f0;
+border-left:5px solid red;
+}
+
+.tip{
+background:#fff8e6;
+border-left:5px solid orange;
+padding:15px;
+border-radius:8px;
+margin-top:15px;
+}
+
+footer{
+background:#a6203a;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2rem;
+}
+
+.card{
+padding:20px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 8px 18px rgba(0,0,0,0.12);
+}
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+margin-top:15px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFkQkqMeKoGbEvigZjXpJVTOw0WJ9Mjm4CrQ&s" alt="Amrita Logo" />
+<div class="logo-text">
+<h1>Amrita Vishwa Vidyapeetham</h1>
+<p>Amaravati Campus</p>
+</div>
+
+</div>
+
+<nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="academicpage.html">Academics</a></li>
+      <li><a href="Clubs.html">Clubs</a></li>
+      <li><a href="campushostelpage.html">Hostel Life</a></li>
+      <li><a href="survival.html">Survival Kit</a></li>
+      <li><a href="tools.html">Resources</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+</header>
+
+<section class="hero">
+
+<p class="hero-badge">
+Success • Balance • Growth
+</p>
+
+<h1>Fresher Survival Kit</h1>
+
+<p>
+College is an exciting new chapter filled with opportunities,
+challenges, friendships, and personal growth. This survival kit
+contains practical advice from seniors to help you avoid common
+mistakes, manage academics effectively, maintain a healthy lifestyle,
+and make the most of your first year at Amrita Amaravati.
+</p>
+
+</section>
+<div class="container">
+
+<!-- Do's -->
+
+<section class="section">
+
+<h2>✅ Do's Every Fresher Should Follow</h2>
+
+<div class="cards">
+
+<div class="card do">
+<h3>Attend Classes Regularly</h3>
+<p>
+Attendance and internals matter. Missing classes can make exams much harder.
+</p>
+</div>
+
+<div class="card do">
+<h3>Talk to Seniors</h3>
+<p>
+Seniors can guide you about courses, faculty, clubs and internships.
+</p>
+</div>
+
+<div class="card do">
+<h3>Join Clubs</h3>
+<p>
+Participate in technical and cultural clubs to improve skills and networking.
+</p>
+</div>
+
+<div class="card do">
+<h3>Learn Beyond Classrooms</h3>
+<p>
+Use platforms like LeetCode, GeeksforGeeks and NPTEL from your first year.
+</p>
+</div>
+
+<div class="card do">
+<h3>Build Friendships</h3>
+<p>
+Your friends will become your support system during assignments and exams.
+</p>
+</div>
+
+<div class="card do">
+<h3>Maintain Notes</h3>
+<p>
+Good notes make exam preparation much easier.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- Don'ts -->
+
+<section class="section">
+
+<h2>❌ Don'ts Every Fresher Should Avoid</h2>
+
+<div class="cards">
+
+<div class="card dont">
+<h3>Don't Ignore Internals</h3>
+<p>
+Many students focus only on end-semester exams and regret it later.
+</p>
+</div>
+
+<div class="card dont">
+<h3>Don't Procrastinate</h3>
+<p>
+Assignments pile up quickly if you keep postponing them.
+</p>
+</div>
+
+<div class="card dont">
+<h3>Don't Skip Labs</h3>
+<p>
+Labs contribute to your practical knowledge and internal marks.
+</p>
+</div>
+
+<div class="card dont">
+<h3>Don't Depend Only on Faculty</h3>
+<p>
+Self-learning is an important part of engineering education.
+</p>
+</div>
+
+<div class="card dont">
+<h3>Don't Compare Yourself Constantly</h3>
+<p>
+Everyone learns at a different pace. Focus on improvement.
+</p>
+</div>
+
+<div class="card dont">
+<h3>Don't Stay Isolated</h3>
+<p>
+Participate in activities and interact with classmates.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- Senior Mistakes -->
+
+<section class="section">
+
+<h2>⚠️ Common Mistakes Seniors Made</h2>
+
+<ul>
+
+<li>Waiting until exams to start studying.</li>
+
+<li>Ignoring coding during first year.</li>
+
+<li>Thinking CGPA can be fixed in the final semester.</li>
+
+<li>Missing club opportunities because of hesitation.</li>
+
+<li>Not exploring internships and competitions early.</li>
+
+<li>Spending too much time on social media.</li>
+
+<li>Not asking doubts when they were confused.</li>
+
+<li>Ignoring health during busy semesters.</li>
+
+</ul>
+
+<div class="tip">
+💡 Most seniors agree that consistency beats last-minute hard work.
+</div>
+
+</section>
+
+<!-- Time Management -->
+
+<section class="section">
+
+<h2>⏰ Managing Studies & Activities</h2>
+
+<p>
+College is not just academics. The key is balancing studies,
+clubs, sports and personal time.
+</p>
+
+<div class="cards">
+
+<div class="card do">
+<h3>Weekdays</h3>
+<p>
+Focus on classes, assignments and coding practice.
+</p>
+</div>
+
+<div class="card do">
+<h3>Evenings</h3>
+<p>
+Use club activities and sports for skill development and relaxation.
+</p>
+</div>
+
+<div class="card do">
+<h3>Weekends</h3>
+<p>
+Revise subjects, complete pending work and learn new technologies.
+</p>
+</div>
+
+<div class="card do">
+<h3>Daily Habit</h3>
+<p>
+Even 30–60 minutes of coding every day creates huge improvement over time.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- Mental Health -->
+
+<section class="section">
+
+<h2>🧠 Mental Health & Stress Management</h2>
+
+<p>
+Engineering can sometimes feel overwhelming, especially during exam periods.
+Taking care of yourself is just as important as academics.
+</p>
+
+<div class="cards">
+
+<div class="card do">
+<h3>Get Enough Sleep</h3>
+<p>
+Sleep improves concentration and memory retention.
+</p>
+</div>
+
+<div class="card do">
+<h3>Stay Physically Active</h3>
+<p>
+Sports, walking and exercise help reduce stress.
+</p>
+</div>
+
+<div class="card do">
+<h3>Talk to Someone</h3>
+<p>
+Share concerns with friends, seniors, faculty or family members.
+</p>
+</div>
+
+<div class="card do">
+<h3>Take Breaks</h3>
+<p>
+Continuous studying without breaks reduces productivity.
+</p>
+</div>
+
+<div class="card do">
+<h3>Don't Fear Failure</h3>
+<p>
+One bad quiz or one bad semester doesn't define your future.
+</p>
+</div>
+
+<div class="card do">
+<h3>Celebrate Small Wins</h3>
+<p>
+Completing assignments, improving grades and learning new skills all matter.
+</p>
+</div>
+
+</div>
+
+<div class="tip">
+🌟 Final Advice: Your first year is about adapting, learning and exploring. Focus on progress, not perfection.
+</div>
+
+</section>
+
+</div>
+
+<footer>
+Campus Compass 2026 | Amrita Vishwa Vidyapeetham, Amaravati
+</footer>
+
+</body>
+</html>

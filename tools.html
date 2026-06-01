@@ -1,0 +1,572 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resources & Tools | Campus Compass</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:#f8f9fb;
+color:#333;
+line-height:1.7;
+}
+
+header{
+background:#a6203a;
+color:white;
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.logo{
+display:flex;
+align-items:center;
+}
+
+.logo img{
+height:70px;
+margin-right:15px;
+}
+
+.logo-text h1{
+font-size:24px;
+}
+
+.logo-text p{
+color:#ffe6ea;
+}
+
+nav ul{
+display:flex;
+gap:20px;
+list-style:none;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+}
+
+nav a:hover{
+text-decoration:underline;
+}
+
+.hero{
+background:
+linear-gradient(
+rgba(0,0,0,0.35),
+rgba(0,0,0,0.35)
+),
+url("https://webfiles.amrita.edu/2023/02/nQwgcIAc-amaravati-amrita-school-engineering-img2.jpg");
+
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+
+color:white;
+text-align:center;
+
+min-height:420px;
+padding:100px 20px;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+
+.hero h1{
+font-size:3rem;
+margin-bottom:20px;
+text-shadow:2px 2px 8px rgba(0,0,0,0.5);
+}
+
+.hero p{
+max-width:850px;
+margin:auto;
+font-size:1.15rem;
+line-height:1.8;
+text-shadow:1px 1px 5px rgba(0,0,0,0.5);
+}
+
+.hero-badge{
+display:inline-block;
+background:rgba(255,255,255,0.15);
+border:1px solid rgba(255,255,255,0.3);
+backdrop-filter:blur(8px);
+padding:10px 20px;
+border-radius:30px;
+margin-bottom:20px;
+font-weight:600;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:40px auto;
+}
+
+.section{
+background:white;
+padding:30px;
+border-radius:12px;
+margin-bottom:25px;
+box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+
+.section h2{
+color:#a6203a;
+margin-bottom:20px;
+border-left:5px solid #a6203a;
+padding-left:12px;
+}
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:#fff3f5;
+border-left:5px solid #a6203a;
+padding:20px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 8px 18px rgba(0,0,0,0.12);
+}
+.card h3{
+color:#a6203a;
+margin-bottom:10px;
+}
+
+.card a{
+color:#0066cc;
+text-decoration:none;
+font-weight:600;
+}
+
+.card a:hover{
+text-decoration:underline;
+}
+
+.tip{
+background:#fff8e6;
+border-left:5px solid orange;
+padding:15px;
+border-radius:8px;
+margin-top:20px;
+}
+
+.checklist{
+margin-top:15px;
+padding-left:20px;
+}
+
+.checklist li{
+margin-bottom:10px;
+}
+
+footer{
+background:#a6203a;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2rem;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+margin-top:15px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFkQkqMeKoGbEvigZjXpJVTOw0WJ9Mjm4CrQ&s" alt="Amrita Logo" />
+
+
+<div class="logo-text">
+<h1>Amrita Vishwa Vidyapeetham</h1>
+<p>Amaravati Campus</p>
+</div>
+
+</div>
+
+<nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="academicpage.html">Academics</a></li>
+      <li><a href="Clubs.html">Clubs</a></li>
+      <li><a href="campushostelpage.html">Hostel Life</a></li>
+      <li><a href="survival.html">Survival Kit</a></li>
+      <li><a href="tools.html">Resources</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+</header>
+
+<section class="hero">
+
+<p class="hero-badge">
+Productivity • Learning • Innovation
+</p>
+
+<h1>Must-Have Tools & Resources</h1>
+
+<p>
+Success in engineering is not just about attending classes—
+it's about using the right tools, platforms, and resources.
+This guide introduces the essential apps, websites, learning
+platforms, and productivity tools that can help you excel
+academically, build technical skills, and prepare for future careers.
+</p>
+
+</section>
+<div class="container">
+
+<!-- Useful Apps -->
+
+<section class="section">
+
+<h2>📱 Useful Apps Every Student Should Install</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Student Portal App</h3>
+<p>
+Track attendance, view student information,
+academic records and important announcements.
+</p>
+</div>
+
+<div class="card">
+<h3>AUMS App</h3>
+<p>
+Access online examinations, academic details,
+results and university services directly from your phone.
+</p>
+</div>
+
+<div class="card">
+<h3>Google Drive</h3>
+<p>
+Store notes, assignments and project files securely.
+</p>
+</div>
+
+<div class="card">
+<h3>Google Calendar</h3>
+<p>
+Track exams, assignment deadlines and important events.
+</p>
+</div>
+
+<div class="card">
+<h3>GitHub</h3>
+<p>
+Store code, collaborate on projects and build your portfolio.
+</p>
+</div>
+
+<div class="card">
+<h3>ChatGPT</h3>
+<p>
+Learn concepts, debug code and get project guidance.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- Learning Platforms -->
+
+<section class="section">
+
+<h2>📚 Learning Platforms</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>NPTEL</h3>
+<p>Free IIT courses and certifications.</p>
+<a href="https://nptel.ac.in" target="_blank">Visit Website</a>
+</div>
+
+<div class="card">
+<h3>GeeksforGeeks</h3>
+<p>Programming tutorials and interview preparation.</p>
+<a href="https://www.geeksforgeeks.org" target="_blank">Visit Website</a>
+</div>
+
+<div class="card">
+<h3>LeetCode</h3>
+<p>Practice coding questions for placements.</p>
+<a href="https://leetcode.com" target="_blank">Visit Website</a>
+</div>
+
+<div class="card">
+<h3>HackerRank</h3>
+<p>Improve coding and problem-solving skills.</p>
+<a href="https://www.hackerrank.com" target="_blank">Visit Website</a>
+</div>
+
+<div class="card">
+<h3>freeCodeCamp</h3>
+<p>Free certifications and web development courses.</p>
+<a href="https://www.freecodecamp.org" target="_blank">Visit Website</a>
+</div>
+
+<div class="card">
+<h3>Kaggle</h3>
+<p>Datasets, competitions and AI/ML practice.</p>
+<a href="https://www.kaggle.com" target="_blank">Visit Website</a>
+</div>
+
+</div>
+
+</section>
+
+<!-- College Portals -->
+
+<section class="section">
+
+<h2>🏫 Important College Portals</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>📱 Student Portal</h3>
+<p>
+Used for attendance tracking, student information,
+course details and academic updates.
+</p>
+</div>
+
+<div class="card">
+<h3>📝 AUMS Website & App</h3>
+<p>
+The most important academic platform.
+Online examinations are conducted through AUMS and
+semester results are published here.
+</p>
+
+<a href="https://aums.amrita.edu" target="_blank">
+Open AUMS
+</a>
+
+</div>
+
+<div class="card">
+<h3>💳 My Amrita Portal</h3>
+<p>
+Used for fee payments, payment receipts,
+financial information and other student services.
+</p>
+
+<a href="https://my.amrita.edu" target="_blank">
+Open My Amrita Portal
+</a>
+
+</div>
+
+<div class="card">
+<h3>📧 Student Email</h3>
+<p>
+Official communication from faculty,
+administration and clubs.
+</p>
+</div>
+
+</div>
+
+<div class="tip">
+📌 Check Student Portal and AUMS regularly. Most attendance updates,
+exam notifications, hall tickets and results are shared there.
+</div>
+
+</section>
+
+<!-- Project Tools -->
+
+<section class="section">
+
+<h2>🛠️ Free Tools for Projects</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>VS Code</h3>
+<p>Most popular code editor for development.</p>
+</div>
+
+<div class="card">
+<h3>Git & GitHub</h3>
+<p>Version control and collaboration.</p>
+</div>
+
+<div class="card">
+<h3>Postman</h3>
+<p>API testing and backend development.</p>
+</div>
+
+<div class="card">
+<h3>Figma</h3>
+<p>UI/UX design and prototyping.</p>
+</div>
+
+<div class="card">
+<h3>Canva</h3>
+<p>Create posters, presentations and graphics.</p>
+</div>
+
+<div class="card">
+<h3>Netlify / Vercel</h3>
+<p>Free deployment for websites and projects.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- Productivity -->
+
+<section class="section">
+
+<h2>⚡ Notes & Productivity Tools</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Notion</h3>
+<p>All-in-one workspace for notes and planning.</p>
+</div>
+
+<div class="card">
+<h3>Google Keep</h3>
+<p>Quick notes and reminders.</p>
+</div>
+
+<div class="card">
+<h3>OneNote</h3>
+<p>Digital notebook for organizing class notes.</p>
+</div>
+
+<div class="card">
+<h3>Trello</h3>
+<p>Task management and project planning.</p>
+</div>
+
+<div class="card">
+<h3>Google Docs</h3>
+<p>Create and collaborate on documents.</p>
+</div>
+
+<div class="card">
+<h3>Pomofocus</h3>
+<p>Pomodoro timer for focused study sessions.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- First Week Checklist -->
+
+<section class="section">
+
+<h2>🚀 Freshers First Week Action Plan</h2>
+
+<p>
+Complete these important tasks during your first week to ensure
+a smooth transition into college life and stay ahead from Day One.
+</p>
+
+<br>
+
+<ul class="checklist">
+
+<li>✅ Create and verify your AUMS account.</li>
+
+<li>✅ Install and explore the Student Portal App.</li>
+
+<li>✅ Login to My Amrita Portal and check your details.</li>
+
+<li>✅ Activate and regularly monitor your official student email.</li>
+
+<li>✅ Join class, hostel, and department WhatsApp groups.</li>
+
+<li>✅ Save mentor, faculty, and important administrative contacts.</li>
+
+<li>✅ Bookmark AUMS and My Amrita Portal for quick access.</li>
+
+<li>✅ Create a GitHub account and upload your first repository.</li>
+
+<li>✅ Explore NPTEL, GeeksforGeeks, and other learning resources.</li>
+
+<li>✅ Solve your first coding problem on LeetCode.</li>
+
+</ul>
+
+<div class="tip">
+🎯 Completing these tasks in your first week will help you stay organized,
+avoid confusion, and start your academic journey with confidence.
+</div>
+
+</section>
+<!-- Senior Advice -->
+
+<section class="section">
+
+<h2>🎯 Senior Advice</h2>
+
+<div class="tip">
+ <strong>Senior Advice:</strong> Start building your skills from Day One.
+A GitHub profile, consistent coding practice on LeetCode, and NPTEL
+certifications can significantly strengthen your resume over the next
+four years. Small daily efforts often create the biggest long-term results.
+</div>
+</section>
+
+</div>
+
+<footer>
+Campus Compass 2026 | Amrita Vishwa Vidyapeetham, Amaravati
+</footer>
+
+</body>
+</html>
+```
